@@ -1,0 +1,36 @@
+/*
+Settings
+ */
+@import "base/mixins";
+@import "base/fonts";
+@import "base/base";
+@import "base/custom-properties";
+@import "base/classes";
+@import "base/typography";
+
+/*
+Libs
+ */
+@import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.min.css";
+
+/*
+Components
+ */
+@import "components/app";
+@import "components/header";
+@import "components/footer";
+@import "components/button";
+@import "components/nav";
+@import "components/page";
+@import "components/social";
+@import "components/section";
+@import "components/scroll-settings";
+@import "components/grid";
+@import "components/video";
+@import "components/burger";
+@import "components/link";
+
+/*
+Pages
+ */
+@import "pages/home/index";

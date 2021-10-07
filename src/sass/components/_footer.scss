@@ -1,0 +1,20 @@
+.footer{
+		&-nav{
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			margin-bottom: -6px;
+				nav{
+
+				}
+				ul{
+					display: flex;
+					align-items: flex-end;
+				}
+				li{
+					&:not(:last-child){
+						padding-right: 17vmin;
+					}
+				}
+		}
+}

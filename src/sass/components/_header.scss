@@ -1,0 +1,21 @@
+.header{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	padding: 0 50px;
+	z-index: 1;
+		&-panel{
+			display: flex;
+			align-items: center;
+				&-social{
+
+				}
+				&-nav{
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					padding-right: 22px;
+				}
+		}
+}

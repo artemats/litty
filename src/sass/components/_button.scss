@@ -1,0 +1,26 @@
+.btn{
+	display: inline-flex;
+	align-items: center;
+	color: var(--color-red);
+	font-family: var(--font-title);
+	font-size: 14px;
+	font-size: .88em;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+	background-color: transparent;
+	padding: 0;
+	border: none;
+		&-title{
+			display: inline-block;
+			padding-top: 3px;
+		}
+		&-icon{
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			margin-left: 40px;
+				path, rect{
+					fill: currentColor;
+				}
+		}
+}

@@ -1,0 +1,40 @@
+.hero{
+		&.__home{
+			padding: 50px;
+			position: relative;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			height: 100%;
+				.hero{
+					&-content{
+						max-width: 580px;
+							@include mh($minHeight){
+								max-width: 60vmin;
+							}
+							&-title{
+
+							}
+							&-description{
+								max-width: 73%;
+							}
+							&-action{
+								margin: 6vmin 0 7vmin;
+							}
+					}
+				}
+		}
+		&-footer{
+			position: absolute;
+			bottom: 50px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+				&-image{
+					width: 178px;
+					height: 42px;
+					margin: 0 auto;
+				}
+		}
+}

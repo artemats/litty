@@ -1,0 +1,169 @@
+.home{
+	&-videos {
+		//padding: 11vmin 4.5vmin 0;
+		padding: 11vmin 0 0;
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 50px);
+			&-title {
+				padding-left: 13.5vmin;
+				opacity: .1;
+					[class^=h]{
+						text-transform: none;
+					}
+			}
+			&-list {
+				position: relative;
+				height: 100%;
+				transition: transform var(--transform-duration) var(--transform-ease);
+				margin-top: -3px;
+					&:hover{
+						transform: translateY(10vmin);
+					}
+			}
+	}
+	&-video{
+		height: 33.33%;
+		width: 100%;
+		transition: transform var(--transform-duration) var(--transform-ease);
+		position: relative;
+			&-title{
+				position: absolute;
+				top: 12.5%;
+				left: 8.2%;
+				font-family: var(--font-title-extra);
+				font-size: 100px;
+				line-height: 1em;
+				text-transform: uppercase;
+				pointer-events: none;
+				transition: opacity var(--opacity-duration) var(--opacity-ease), z-index var(--opacity-duration) var(--opacity-ease);
+					@include mh($minHeight){
+						font-size: 11.65vmin;;
+					}
+			}
+			&-item{
+				height: 250%;
+				overflow: hidden;
+				//transform: perspective(120vmin) rotateX(-14deg);
+				clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
+				position: relative;
+				transition: clip-path var(--transform-duration) var(--transform-ease);
+					&:after{
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background-image: url(../images/noise-xl.png);
+						background-repeat: repeat;
+						background-size: 50%;
+						opacity: .05;
+						pointer-events: none;
+						z-index: 1;
+					}
+					&.is-playing{
+						clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+					}
+			}
+			&.__1{
+				.home-video{
+					&-item{
+						background-color: var(--color-grey-200);
+					}
+					&-title{
+						color: var(--color-grey-100);
+					}
+				}
+				.video{
+						&-btn {
+							border-color: var(--color-grey-100);
+								&:before {
+									border-color: transparent transparent transparent var(--color-grey-100);
+								}
+						}
+				}
+			}
+			&.__2{
+				z-index: 1;
+					.home-video{
+						&-item{
+							background-color: var(--color-red);
+						}
+						&-title{
+							color: var(--color-grey);
+						}
+					}
+					.video{
+					&-btn{
+						border-color: var(--color-grey);
+							&:before{
+								border-color: transparent transparent transparent var(--color-grey);
+							}
+					}
+				}
+					&:hover{
+						.video{
+							&-thumbnail{
+								opacity: .2;
+							}
+						}
+					}
+			}
+			&.__3{
+				z-index: 2;
+					.home-video{
+						&-item{
+							background-color: var(--color-white);
+						}
+						&-title{
+							color: var(--color-grey-300);
+						}
+					}
+					.video{
+						&-btn{
+							border-color: var(--color-grey-300);
+								&:before{
+									border-color: transparent transparent transparent var(--color-grey-300);
+								}
+						}
+					}
+					&:hover{
+						transform: translateY(-19vmin);
+							.video{
+								&-thumbnail{
+									opacity: .2;
+								}
+							}
+					}
+			}
+			.video{
+				&-thumbnail{
+					opacity: 0;
+				}
+			}
+			&:hover{
+				transform: translateY(-17vmin);
+					.home-video-title{
+						opacity: 1;
+						z-index: 1;
+					}
+					.video{
+						&-btn{
+							opacity: 1;
+						}
+						&-thumbnail{
+							opacity: .1;
+							transform: translateY(0);
+						}
+					}
+			}
+	}
+}
+
+#home-videos{
+	margin: 0 10vw;
+		.section-content{
+			width: 100vw;
+		}
+}

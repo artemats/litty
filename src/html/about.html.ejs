@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <title>About - ARCH Motorcycle</title>
+
+<%=require('./components/head.html')%>
+<%=require('./components/header.html')%>
+<div class="scroll-container" id="scroll-container">
+    <div data-router-wrapper>
+        <div data-router-view="about">
+            <div class="page">
+                <section class="section hero">
+                    <h1>About page</h1>
+                </section>
+                <section class="section">
+                    <img src="https://cdn.pixabay.com/photo/2021/07/22/01/01/parrot-6484206_1280.jpg" alt="">
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<%=require('./components/scripts.html')%>

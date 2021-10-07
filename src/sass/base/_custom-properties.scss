@@ -1,0 +1,22 @@
+:root {
+  --color-black:                          #111111;
+  --color-white:                          #FFFFFF;
+  --color-red:                            #B75038;
+  --color-grey:                           #4C4B4C;
+  --color-grey-100:                       #636363;
+  --color-grey-200:                       #262427;
+  --color-grey-300:                       #929292;
+  --opacity-duration:                     .7s;
+  --opacity-ease:                         ease;
+  --transform-duration:                   .7s;
+  --transform-ease:                       ease;
+  --font-title:                           'BrutalType-Bold';
+  --font-title-extra:                     'BrutalType-ExtraBold';
+  --font-title-light:                     'BrutalType-Light';
+  --font-body:                            'SFProDisplay-Regular';
+}
+
+//$minHeight:                               880;
+$minHeight:                               500;
+$motorcycleMinHeight:                     400;
+$minDesktopWidth:                         991;

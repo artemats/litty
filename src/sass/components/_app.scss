@@ -1,0 +1,36 @@
+body{
+	background-color: var(--color-black);
+	color: var(--color-white);
+	font-family: var(--font-body);
+	font-size: 16px;
+		@include mh($minHeight){
+			font-size: 1.86vmin;
+		}
+}
+
+#wrapper{
+	position: relative;
+	width: auto;
+	overflow: hidden;
+}
+
+.container{
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	padding: 0 15px;
+}
+
+.copyright{
+	font-family: var(--font-title-light);
+	font-size: 50px;
+	line-height: .9em;
+	display: inline-flex;
+	align-items: flex-end;
+		&-sign{
+			font-size: .7em;
+			line-height: 1em;
+			display: inline-block;
+			margin-right: 9px;
+		}
+}

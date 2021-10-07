@@ -1,0 +1,57 @@
+h1{
+	font-size: 62px;
+	line-height: 1.2em;
+	font-family: var(--font-title-extra);
+	text-transform: uppercase;
+		@include mh($minHeight){
+			font-size: 7.3vmin;
+		}
+}
+
+h2{
+	font-size: 150px;
+	line-height: 1em;
+	font-family: var(--font-title-extra);
+	text-transform: uppercase;
+		@include mh($minHeight){
+			font-size: 17.45vmin;
+		}
+}
+
+h3{
+	font-size: 122px;
+	line-height: 1em;
+	font-family: var(--font-title-extra);
+	text-transform: uppercase;
+		@include mh($minHeight){
+			font-size: 14.2vmin;
+		}
+}
+
+h4{
+	font-size: 120px;
+	line-height: 1em;
+	font-family: var(--font-title-extra);
+	text-transform: uppercase;
+		@include mh($minHeight){
+			font-size: 14vmin;
+		}
+}
+
+h5{
+	font-size: 30px;
+	line-height: 1em;
+	font-family: var(--font-title-extra);
+	text-transform: uppercase;
+	color: var(--color-grey);
+	font-weight: 900;
+		@include mh($minHeight){
+			font-size: 3.55vmin;
+		}
+}
+
+p, li{
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 1.63em;
+}

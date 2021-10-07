@@ -1,0 +1,38 @@
+.grid{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	opacity: .1;
+	pointer-events: none;
+	color: var(--color-white);
+	z-index: 1;
+		&-line{
+			position: absolute;
+			background-color: currentColor;
+				&.__1,
+				&.__2,
+				&.__3{
+					width: 1px;
+					top: 0;
+					bottom: 0;
+					height: 100%;
+				}
+				&.__1{
+					left: 25%;
+				}
+				&.__2{
+					left: 50%;
+				}
+				&.__3{
+					left: 75%;
+				}
+				&.__4{
+					left: 0;
+					width: 100%;
+					height: 1px;
+					top: 50%;
+				}
+		}
+}
