@@ -1,9 +1,9 @@
 import { locoScroll } from "./locoScroll";
 import {hideGrid, showGrid} from "../common/switchVisibilityGrid";
-import {pauseHomeHeroVideo, playHomeHeroVideo} from "../common/togglePlayingHomeVideo";
+import {pauseHomeHeroVideo, playHomeHeroVideo} from "../common/home/togglePlayingHomeVideo";
 import {setDarkColorTheme, setWhiteColoTheme} from "../common/switchColorTheme";
 import {switchMotorcycles} from "../common/switchMotorcycles";
-import {toggleHomeAboutTitles} from "../common/toggleHomeAboutTitles";
+import {switchHeaderNav} from "../common/switchHeaderNav";
 
 export const scrollListener = () => {
 
@@ -53,6 +53,16 @@ export const scrollListener = () => {
 		}
 		if(func === 'homeVideos' && dir === 'exit') {
 			showGrid();
+		}
+
+		/*
+		Switch header nav with footer visible on scroll
+		 */
+		if(func === 'footer' && dir === 'enter') {
+			switchHeaderNav(0);
+		}
+		if(func === 'footer' && dir === 'exit') {
+			switchHeaderNav(1)
 		}
 
 	});

@@ -1,5 +1,5 @@
 import { TweenLite } from 'gsap';
-import {transitionConstants} from "../constants/transition";
+import {transitionConstants} from "../../constants/transition";
 
 export const playHomeHeroVideo = () => {
 

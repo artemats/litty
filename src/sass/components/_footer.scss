@@ -17,4 +17,31 @@
 					}
 				}
 		}
+		&-social{
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+				&-link{
+					text-transform: lowercase;
+					width: 100%;
+				}
+				li{
+					&:not(:last-child){
+						padding-bottom: 5.1vmin;
+					}
+				}
+		}
+		&-banner{
+			position: absolute;
+			height: 53.7vmin;
+			width: 47vmin;
+			bottom: -50px;
+			left: 44.5%;
+			pointer-events: none;
+			z-index: -1;
+				img{
+					@include imageCover(center);
+				}
+		}
 }

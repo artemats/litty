@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	splittingText();
 	toggleAboutTitles();
 	followMouseButton();
-	playVideos();
+	playVideos();`01`
 });
 
-locoScroll.scrollTo(document.querySelector('#footer'), {
-	// duration: 5,
-	// disableLerp: true,
-	callback: () => {
-		locoScroll.update();
-		console.log('scrolled');
-	}
-});
+// locoScroll.scrollTo(document.querySelector('#footer'), {
+// 	// duration: 5,
+// 	// disableLerp: true,
+// 	callback: () => {
+// 		locoScroll.update();
+// 		console.log('scrolled');
+// 	}
+// });
