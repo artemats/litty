@@ -111,14 +111,14 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve(__dirname, 'src/html', 'index.html.ejs'),
+            template: path.resolve(__dirname, 'src/html', 'index.html'),
             minify: {
                 collapseWhitespace: false
             },
         }),
         new HtmlWebpackPlugin({
             filename: 'page-not-found.html',
-            template: path.resolve(__dirname, 'src/html', 'page-not-found.html.ejs'),
+            template: path.resolve(__dirname, 'src/html', 'page-not-found.html'),
             minify: {
                 collapseWhitespace: false
             },
