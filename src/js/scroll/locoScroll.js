@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import LocomotiveScroll from 'locomotive-scroll';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import {closeNav} from "../common/toggleNav";
 
 const scrollContainer = document.querySelector('#scroll-container');
 gsap.registerPlugin(ScrollTrigger);
@@ -9,10 +10,10 @@ export const locoScroll = new LocomotiveScroll({
 	smooth: true,
 	lerp: 0.07,
 	tablet: {
-		smooth: true,
+		smooth: false,
 	},
 	smartphone: {
-		smooth: true,
+		smooth: false,
 	},
 });
 
@@ -30,3 +31,7 @@ ScrollTrigger.scrollerProxy('#scroll-container', {
 
 ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 ScrollTrigger.refresh();
+
+window.addEventListener('scroll', function(e) {
+	closeNav();
+});

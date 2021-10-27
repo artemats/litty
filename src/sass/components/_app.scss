@@ -11,8 +11,11 @@ body{
 #wrapper{
 	position: relative;
 	overflow: hidden;
-	height: 100%;
+	height: auto;
 	width: 100%;
+		@include m(1025){
+			height: 100%;
+		}
 }
 
 .section{
