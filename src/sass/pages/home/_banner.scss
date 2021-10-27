@@ -1,0 +1,127 @@
+.banner{
+	position: absolute;
+	inset: 0;
+		&-thumb{
+			position: absolute;
+			top: 51.9%;
+			left: 10.6%;
+			width: 390px;
+			height: 276px;
+			padding: 200px 60px 15px;
+			border: 1px rgba(255,255,255,.4) solid;
+			border-radius: 30px;
+			background-color: var(--color-green-300);
+			transition: background-color var(--opacity-duration) var(--opacity-ease);
+				&-image{
+					position: absolute;
+					max-width: 293px;
+					bottom: 32%;
+					left: 7%;
+					transition: transform var(--move-duration) var(--transform-ease);
+				}
+				&-title{
+					font-size: 20px;
+					color: var(--color-white);
+					position: relative;
+				}
+				&-progress{
+					position: absolute;
+					bottom: 41px;
+					right: 32px;
+					width: 38px;
+					height: 38px;
+					border-radius: 50%;
+					border: 2px var(--color-white) solid;
+						&.is-running{
+							circle{
+								animation-play-state: running;
+							}
+						}
+				}
+				@include d($lg){
+					left: 7%;
+				}
+				@include d($xxl){
+					left: 1%;
+					width: 360px;
+					padding: 200px 35px 15px;
+				}
+				@include d($md){
+					display: none;
+				}
+		}
+		&-abstract{
+			position: absolute;
+			pointer-events: none;
+			transition: transform var(--move-duration) var(--transform-ease), opacity var(--move-duration) var(--opacity-ease);
+				&.__1{
+					width: 160px;
+					height: 155px;
+					top: 16.2%;
+					left: 0.5%;
+						@include d($lg){
+							width: 130px;
+							height: 125px;
+						}
+						@include d($xxl){
+							width: 110px;
+							height: 105px;
+							top: 13.2%;
+							left: -1.5%;
+						}
+						@include d($xs){
+							left: -7%;
+						}
+						@include d($xxs){
+							width: 80px;
+							height: 75px;
+							left: -10%;
+							top: 10.2%;
+						}
+				}
+				&.__2{
+					width: 208px;
+					height: 200px;
+					right: 9.6%;
+					bottom: 10.8%;
+						@include d($lg){
+							width: 178px;
+							height: 170px;
+						}
+						@include d($xxl){
+							width: 158px;
+							height: 150px;
+						}
+						@include d($sm){
+							right: 5.6%;
+							bottom: 0.8%;
+						}
+						@include d($xxs){
+							right: -13%;
+						}
+				}
+		}
+		&-counter{
+			text-align: center;
+			font-size: 12px;
+			line-height: 1em;
+			white-space: nowrap;
+			color: var(--color-white);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+}
+
+.progress-ring{
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	transform: rotate(-90deg);
+		circle{
+			stroke: var(--color-violet);
+			stroke-dasharray: 113, 113;
+			stroke-dashoffset: 113;
+		}
+}

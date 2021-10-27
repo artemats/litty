@@ -1,0 +1,106 @@
+.pnf{
+	height: 100vh;
+	min-height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+		&-box{
+			text-align: center;
+			color: var(--color-white);
+				.hero-description-abstract{
+					margin-left: auto;
+					margin-right: auto;
+						@include d($xl){
+							max-width: 420px;
+						}
+						@include d($md){
+							max-width: 350px;
+						}
+				}
+		}
+		.h{
+			&-2 {
+				font-size: 230px;
+				margin-bottom: 31px;
+					span {
+						margin: 0 23px;
+						padding: 0 27px;
+						border-radius: 50px;
+							@include d($sm){
+								margin: 0 10px;
+								padding: 0 15px;
+							}
+					}
+					@include d($xl){
+						font-size: 180px;
+					}
+					@include d($md){
+						font-size: 140px;
+					}
+			}
+			&-4{
+				margin-bottom: 8px;
+			}
+		}
+		.btn{
+			margin-top: 30px;
+		}
+		.section{
+				&-bg{
+					width: 100%;
+					height: 100%;
+						img{
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							object-position: center bottom;
+						}
+				}
+		}
+		.banner{
+				&-abstract{
+					pointer-events: none;
+					&.__1{
+						width: 139px;
+						height: auto;
+						top: 27.3%;
+						left: 9%;
+							@include d($xl){
+								left: 5%;
+							}
+							@include d($md){
+								width: 100px;
+							}
+							@include d($sm){
+								top: 1%;
+							}
+					}
+					&.__2{
+						width: 208px;
+						height: auto;
+						right: 8.7%;
+						bottom: 16%;
+							@include d($xl){
+								right: 4%;
+							}
+							@include d($md){
+								width: 160px;
+							}
+							@include d($sm){
+								bottom: 1%;
+								width: 120px;
+							}
+					}
+					&.__3{
+						left: 17%;
+						top: 45%;
+						width: 58px;
+						height: auto;
+							@include d($xl){
+
+							}
+					}
+				}
+		}
+}

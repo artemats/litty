@@ -7,11 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 export const locoScroll = new LocomotiveScroll({
 	el: scrollContainer,
 	smooth: true,
-	direction: 'horizontal',
-	// lerp: 0.07,
+	lerp: 0.07,
 	tablet: {
 		smooth: true,
-		direction: 'horizontal',
 	},
 	smartphone: {
 		smooth: true,
@@ -21,11 +19,8 @@ export const locoScroll = new LocomotiveScroll({
 locoScroll.on('scroll', ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy('#scroll-container', {
-	// scrollTop(value) {
-	// 	return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-	// },
-	scrollLeft(value) {
-		return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.x;
+	scrollTop(value) {
+		return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
 	},
 	getBoundingClientRect() {
 		return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };

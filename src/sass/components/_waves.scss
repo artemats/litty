@@ -1,0 +1,70 @@
+.waves{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+		&-mask{
+			position: absolute;
+			white-space: nowrap;
+			bottom: -80px;
+			left: 0;
+				&-item{
+					display: inline-block;
+					height: 268px;
+					width: 1664px;
+					transition: color var(--opacity-duration) var(--opacity-ease);
+						&:not(:first-child){
+							margin-left: -100px;
+						}
+						svg{
+							width: 100%;
+							height: 100%;
+							fill: currentColor;
+								path{
+									fill: currentColor;
+								}
+						}
+						@include d($sm){
+							width: 1072px;
+							height: 168px;
+						}
+				}
+		}
+		&-row{
+			white-space: nowrap;
+			position: relative;
+			transition: color var(--opacity-duration) var(--opacity-ease);
+				&-item{
+					height: 125px;
+					width: 1664px;
+					display: inline-block;
+						&:not(:first-child){
+							margin-left: -100px;
+						}
+						svg{
+							width: 100%;
+							height: 100%;
+							fill: currentColor;
+								path{
+									fill: currentColor;
+								}
+						}
+						@include d($sm){
+							width: 1072px;
+							height: 82px;
+						}
+				}
+				&.__1{
+					//color: var(--color-green-100);
+					margin-bottom: -75px;
+				}
+				&.__2{
+					opacity: .2;
+					//color: var(--color-green-200);
+				}
+				&.__3{
+					opacity: .2;
+					//color: var(--color-green-200);
+				}
+		}
+}

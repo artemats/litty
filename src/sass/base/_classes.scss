@@ -18,44 +18,28 @@
   @extend h5;
 }
 
-.h-6{
+.h-6 {
   @extend h6;
 }
 
-.text{
-    &-small{
-      font-size: 12px;
-      font-size: .75em;
+.hide{
+  &-md{
+    @include d($md){
+      display: none !important;
     }
-    &-button{
-      font-size: 12px;
-      font-size: .75em;
-      letter-spacing: .2em;
-      line-height: 1em;
-      font-family: var(--font-title);
-      text-transform: uppercase;
+  }
+  &-sm{
+    @include d($sm){
+      display: none !important;
     }
-    &-nav{
-      font-size: 72px;
-      line-height: 1em;
-        @include mh($minHeight) {
-          font-size: 8.37vmin;
-        }
-    }
+  }
 }
 
-.red{
-  color: var(--color-red);
-}
-
-.__pt{
-  padding-top: 23.6vmin;
-}
-
-.__flex{
-    &-column{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+.display{
+  &-md{
+    display: none !important;
+    @include d($md){
+      display: block !important;
     }
+  }
 }

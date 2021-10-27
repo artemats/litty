@@ -1,21 +1,68 @@
 .header{
 	position: absolute;
-	top: 50px;
+	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 0 50px;
-	z-index: 1;
-		&-panel{
+	z-index: 2;
+	padding: 40px 0 20px;
+		&-logo{
+			position: relative;
+			display: inline-block;
+			width: 97px;
+			z-index: 2;
+				@include d($xxs){
+					width: 88px;
+				}
+		}
+		&-nav{
+			height: 100%;
 			display: flex;
 			align-items: center;
-				&-social{
-
+			padding-left: 137px;
+			z-index: 1;
+				&.is-display{
+					display: block;
 				}
-				&-nav{
-					position: absolute;
-					left: 50%;
-					transform: translateX(-50%);
-					padding-right: 22px;
+				&.is-show{
+					opacity: 1;
 				}
+				@include m(768){
+					display: flex !important;
+					opacity: 1 !important;
+				}
+				@include d($xxl){
+					padding-left: 7vw;
+				}
+				@include d($md){
+					padding-left: 0;
+				}
+				@include d($sm){
+					display: none;
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: var(--color-green);
+				}
+		}
+		&-social{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+				//.link{
+				//	@include d($xs){
+				//		display: none;
+				//	}
+				//}
+		}
+		@include d($sm){
+			.col-md-6{
+				position: absolute;
+			}
+		}
+		@include d($xxs){
+			padding: 20px 0 10px;
 		}
 }

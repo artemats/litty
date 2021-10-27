@@ -1,0 +1,28 @@
+.nav{
+		ul{
+			display: flex;
+			align-items: center;
+				@include d($sm){
+					flex-direction: column;
+					align-items: flex-start;
+				}
+		}
+		li{
+			&:not(:last-child){
+				padding-right: 50px;
+			}
+			@include d($sm){
+				padding: 20px 0;
+			}
+		}
+		@include d($sm){
+			padding: 120px 40px;
+				a{
+					font-size: 26px;
+					font-family: var(--font-title);
+				}
+		}
+		@include d($xxs){
+			padding: 120px 20px;
+		}
+}

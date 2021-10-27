@@ -1,0 +1,36 @@
+.input{
+	width: 100%;
+	background-color: transparent;
+	height: 62px;
+	border: none;
+	border-bottom: 1px var(--color-black) solid;
+	font-family: var(--font-body);
+	font-size: 20px;
+	padding: 0;
+		&-container{
+			display: block;
+			position: relative;
+		}
+		&-label{
+			font-size: 20px;
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 15px;
+			transition: font-size var(--transform-duration) var(--transform-ease), top var(--transform-duration) var(--transform-ease);
+		}
+		&:focus,
+		&:valid{
+			outline: none;
+				//& ~ .input-label{
+				//	font-size: 12px;
+				//	top: -12px;
+				//}
+		}
+		&.is-focus{
+			& ~ .input-label{
+				font-size: 12px;
+				top: -12px;
+			}
+		}
+}

@@ -1,0 +1,56 @@
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.8);
+	display: none;
+	opacity: 0;
+		&-close{
+			position: absolute;
+			inset: 0;
+			cursor: pointer;
+		}
+		&-box{
+			width: 416px;
+			min-height: 130px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			background-image: url(../images/modal/bg.svg);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background-color: var(--color-green);
+			border-radius: 40px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+				&-close{
+					position: absolute;
+					width: 40px;
+					height: 40px;
+					top: 5px;
+					right: 12px;
+					padding: 10px;
+					cursor: pointer;
+					transition: transform  var(--transform-duration) var(--transform-ease);
+						@include hover($hoverWidth){
+							&:hover{
+								transform: rotate(180deg);
+							}
+						}
+				}
+				&-abstract{
+					position: absolute;
+					bottom: -23px;
+					left: 15px;
+					width: 90px;
+					pointer-events: none;
+				}
+		}
+}

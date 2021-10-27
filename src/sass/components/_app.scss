@@ -1,36 +1,236 @@
 body{
-	background-color: var(--color-black);
-	color: var(--color-white);
 	font-family: var(--font-body);
-	font-size: 16px;
-		@include mh($minHeight){
-			font-size: 1.86vmin;
+	font-size: 17px;
+	line-height: 1.7em;
+	background-color: var(--color-white);
+		@include d($xxl){
+			font-size: 16px
 		}
 }
 
 #wrapper{
 	position: relative;
-	width: auto;
 	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.section{
+	position: relative;
+		&-content{
+			position: relative;
+			z-index: 1;
+				&-description{
+					&.__column{
+						&-2{
+							column-count: 2;
+							gap: 32px;
+								p{
+									width: 100%;
+								}
+								@include d($md){
+									column-count: 1;
+									gap: 0;
+								}
+						}
+					}
+					p{
+						&:not(:last-child){
+							margin-bottom: 15px;
+						}
+					}
+				}
+				&-action{
+
+				}
+		}
+		&-banner{
+			pointer-events: none;
+				&-abstract{
+					position: absolute;
+				}
+		}
+		&-bg{
+			position: absolute;
+			pointer-events: none;
+			z-index: -1;
+			width: 484px;
+			height: 428px;
+		}
+		&-wave{
+			white-space: nowrap;
+			position: absolute;
+			top: -65px;
+			left: 0;
+				&-item{
+					display: inline-block;
+					width: 1663px;
+					height: 125px;
+						&:not(:first-child){
+							margin-left: -100px;
+						}
+						svg{
+							fill: currentColor;
+						}
+						@include d($sm){
+							width: 1072px;
+							height: 82px;
+						}
+				}
+				@include d($sm){
+					top: -45px;
+				}
+		}
 }
 
 .container{
-	margin-right: auto;
-	margin-left: auto;
-	position: relative;
+	max-width: 1342px;
 	padding: 0 15px;
+	position: relative;
+		@include d($xl){
+			width: 100%;
+			padding: 0 40px;
+		}
+		@include d($xxs){
+			padding: 0 15px;
+		}
+}
+
+.carousel-arrows{
+	display: inline-flex;
+	position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 9px;
+			height: 9px;
+			border-radius: 50%;
+			background-color: var(--color-black);
+			transition: background-color var(--opacity-duration) var(--opacity-ease);
+		}
+		&-btn{
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					width: 0;
+					height: 0;
+					border-style: solid;
+					transition: border-color var(--opacity-duration) var(--opacity-ease);
+				}
+				&.__prev{
+					margin-right: 15px;
+						&:before{
+							border-width: 11.5px 17px 11.5px 0;
+							border-color: transparent var(--color-black) transparent transparent;
+						}
+						@include hover(991){
+							&:hover{
+								&:before{
+									border-color: transparent var(--color-red) transparent transparent;
+								}
+							}
+						}
+				}
+				&.__next{
+					margin-left: 15px;
+						&:before{
+							border-width: 11.5px 0 11.5px 17px;
+							border-color: transparent transparent transparent var(--color-black);
+						}
+						@include hover(991){
+							&:hover{
+								&:before{
+									border-color: transparent transparent transparent var(--color-red);
+								}
+							}
+						}
+				}
+		}
+		@include hover(991){
+			&:hover{
+				&:before{
+					background-color: var(--color-red);
+				}
+			}
+		}
+}
+
+.form{
+	.btn{
+		margin-top: 40px;
+	}
 }
 
 .copyright{
-	font-family: var(--font-title-light);
-	font-size: 50px;
-	line-height: .9em;
-	display: inline-flex;
-	align-items: flex-end;
-		&-sign{
-			font-size: .7em;
-			line-height: 1em;
-			display: inline-block;
-			margin-right: 9px;
+	opacity: .2;
+		@include d($md){
+			opacity: .5;
 		}
+}
+
+.burger{
+	display: none;
+	margin-left: 30px;
+	z-index: 1;
+		&-box{
+			width: 28px;
+			height: 18px;
+			position: relative;
+				&-arrow{
+					position: absolute;
+					right: 0;
+					width: 100%;
+					height: 2px;
+					background-color: var(--color-black);
+					transition: all var(--transform-duration) var(--transform-ease);
+						&:nth-child(1){
+							top: 0;
+						}
+						&:nth-child(2){
+							top: 8px;
+						}
+						&:nth-child(3){
+							bottom: 0;
+						}
+				}
+		}
+		&.is-active{
+			.burger{
+				&-box{
+					&-arrow{
+						&:nth-child(1){
+							transform: rotate(45deg);
+							top: 7px;
+						}
+						&:nth-child(2){
+							transform: rotate(-45deg);
+							top: 7px;
+						}
+						&:nth-child(3){
+							width: 0;
+						}
+					}
+				}
+			}
+		}
+		@include d($sm){
+			display: inline-block;
+		}
+		@include d($xxs){
+			margin-left: 25px;
+		}
+}
+
+.word{
+	display: inline-block;
 }

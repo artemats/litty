@@ -1,79 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<%=require('./components/head.html')%>
 
-	<title>ARCH Motorcycle</title>
+<%=require('./components/header.html')%>
+<%=require('./pages/home/hero.html')%>
+<%=require('./pages/home/about.html')%>
+<%=require('./pages/home/all-products.html')%>
+<%=require('./pages/home/litty.html')%>
+<%=require('./pages/home/hot-products.html')%>
+<%=require('./pages/home/distributors.html')%>
+<%=require('./pages/home/testimonials.html')%>
+<%=require('./pages/home/subscribe.html')%>
+<%=require('./components/footer.html')%>
 
-	<%=require('./components/head.html')%>
-	<%=require('./components/header.html')%>
-	<div class="scroll-container" id="scroll-container">
-		<div data-router-wrapper>
-			<div data-router-view="home">
-				<div class="page" id="page">
-					<div class="grid" data-scroll data-scroll-sticky data-scroll-target="#page">
-						<div class="grid-line __1"></div>
-						<div class="grid-line __2"></div>
-						<div class="grid-line __3"></div>
-						<div class="grid-line __4"></div>
-					</div>
-					<div class="motorcycles" id="home-motorcycles">
-						<div class="section-nav-wrap"
-								 data-scroll
-								 data-scroll-sticky
-								 data-scroll-target="#home-motorcycles">
-							<div class="section-nav">
-								<div class="section-nav-box">
-									<div class="section-nav-title text-nav">Krgt-1</div>
-									<div class="section-nav-title text-nav">Krgt-1</div>
-									<div class="section-nav-title text-nav">Krgt-1</div>
-									<div class="section-nav-title text-nav">Krgt-1</div>
-									<div class="section-nav-title text-nav">Krgt-1</div>
-								</div>
-							</div>
-						</div>
-						<div class="motorcycles-bg"
-								 data-scroll
-								 data-scroll-sticky
-								 data-scroll-target="#home-motorcycles">
-							<div class="motorcycles-bg-slide" data-motorcycle="arch-krgt-1">
-								<img
-									data-src="images/krgt-1/hero-bg.jpg"
-									alt="ARCH Motorcycle"
-									class="motorcycles-bg-image" />
-							</div>
-							<div class="motorcycles-bg-slide" data-motorcycle="arch-1s"></div>
-							<div class="motorcycles-bg-slide" data-motorcycle="arch-method-143">
-								<img
-									data-src="images/method-143/hero-bg.jpg"
-									alt="ARCH Motorcycle"
-									class="motorcycles-bg-image" />
-							</div>
-							<div class="video" id="home-hero-video">
-								<video id="hero-video"
-											 preload="metadata"
-											 playsinline
-											 webkit-playsinline
-											 loop
-											 muted
-											 autoplay>
-									<source src="../video/hero/videoplayback.mp4" type="video/mp4" />
-								</video>
-								<div class="video-mask"></div>
-							</div>
-						</div>
-						<%=require('./pages/home/hero.html')%>
-						<%=require('./pages/home/krgt-1.html')%>
-						<%=require('./pages/home/1s.html')%>
-						<%=require('./pages/home/method-143.html')%>
-					</div>
-					<%=require('./pages/home/banner.html')%>
-					<%=require('./pages/home/about.html')%>
-					<%=require('./pages/home/videos.html')%>
-					<%=require('./components/footer.html')%>
-				</div>
-			</div>
-		</div>
-	</div>
 <%=require('./components/scripts.html')%>

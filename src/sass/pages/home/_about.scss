@@ -1,100 +1,135 @@
-.home-about{
-	//padding-left: 90px;
-		.section-content-title{
-			white-space: nowrap;
-		}
-		&-content{
-			display: flex;
-			height: 100%;
-			align-items: center;
-		}
-		&-title{
-			display: flex;
-			margin-top: 8.7vmin;
-			overflow: hidden;
-			position: relative;
-			pointer-events: none;
-				&-item{
-					display: inline-block;
-				}
-				.h-3{
-					width: 100vw;
-					padding-left: 130px;
-				}
-				span{
-					display: inline-block;
-				}
-		}
-		&-label{
-			position: fixed;
-			padding-left: 130px;
-			overflow: hidden;
-			pointer-events: none;
-				[data-id]{
-					display: inline-block;
-					transform: translateY(100%);
-				}
-		}
-		&-description{
-			position: relative;
-			z-index: 1;
-				.section-content-description{
-						&.__1{
-							max-width: 65vmin;;
-							margin: 8.1vmin 0 0 17.7vmin;
-								p{
-									&:nth-child(1){
-										max-width: 80%;
-									}
+.about{
+	padding: 177px 0 247px;
+		.section{
+				&-content{
+					padding-left: 80px;
+						&-description{
+							padding-top: 62px;
+							max-width: 690px;
+								@include d($md){
+									max-width: 50%;
+								}
+								@include d($xs){
+									max-width: 100%;
+										p{
+											&:nth-child(2){
+												max-width: 50%;
+												margin-top: 80px;
+											}
+										}
 								}
 						}
+						@include d($xl){
+							.h-2{
+								max-width: 80%;
+							}
+						}
+						@include d($xxl){
+							padding-left: 0;
+								.h-2{
+									max-width: 90%;
+								}
+						}
+						@include d($md){
+							.h-2{
+								max-width: 70%;
+							}
+						}
+						@include d($sm){
+							.h-2{
+								max-width: 100%;
+							}
+						}
 				}
-				&.__1{
-					padding-top: 8.7vmin;
+				&-banner{
+					position: absolute;
+					top: -13.5%;
+					right: -2.3%;
+					width: 484px;
+					height: 553px;
+						&-abstract{
+							&.__1{
+								width: 256px;
+								height: 231px;
+								bottom: 3.3%;
+								right: 10.8%;
+									@include d($xl){
+										width: 235px;
+										height: 211px;
+									}
+									@include d($xxl){
+										width: 205px;
+										height: 181px;
+									}
+							}
+							&.__2{
+								width: 273px;
+								height: 271px;
+								bottom: 6.6%;
+								right: 9.2%;
+									@include d($xl){
+										width: 253px;
+										height: 251px;
+									}
+									@include d($xxl){
+										width: 223px;
+										height: 221px;
+									}
+							}
+							&.__3{
+								width: 68px;
+								height: 64px;
+								right: 20%;
+								bottom: 56.3%;
+									@include d($xl){
+										width: 48px;
+										height: 44px;
+									}
+							}
+						}
+						@include d($xl){
+							width: 454px;
+							height: 523px;
+							right: 0;
+						}
+						@include d($xxl){
+							width: 384px;
+							height: 453px;
+							right: -2%;
+						}
+						@include d($md){
+							top: 21%;
+							right: -1%;
+						}
+						@include d($sm){
+							top: 32%;
+						}
+						@include d($xs){
+							width: 334px;
+							height: 403px;
+							top: 57%;
+						}
+						@include d($xxs){
+							height: auto;
+							width: 82%;
+						}
 				}
-				&.__2{
-					max-width: 60vmin;
-					width: 60vmin;
-					padding-top: 4.3vmin;
-					padding-left: 0.7vmin;
+				&-bg{
+					left: 42%;
+					top: 37%;
+						@include d($xs){
+							left: -25%;
+							top: 50%;
+						}
 				}
 		}
-		&-image{
-			position: absolute;
-				&.__1{
-					top: 32.7vmin;
-					right: -19.3vmin;
-					width: 44.2vmin;
-					height: 55.3vmin;
-				}
-				&.__2{
-					top: -50px;
-					left: -66.6vmin;
-					width: 45vmin;
-					height: 30vmin;
-				}
-				.section-content-image{
-					width: 100%;
-					height: 100%;
-				}
+		@include d($md){
+			padding: 140px 0 235px;
 		}
-		.section{
-			&-content{
-				padding-left: 0;
-				padding-right: 0;
-			}
+		@include d($sm){
+			padding: 100px 0 230px;
+		}
+		@include d($xxs){
+			padding: 80px 0 230px;
 		}
 }
-
-//#home-about-title{
-//	&-1{
-//		.home-about-title-item{
-//			padding-left: 120px;
-//		}
-//	}
-//	&-2{
-//		.home-about-title-item{
-//			padding-left: 260px;
-//		}
-//	}
-//}

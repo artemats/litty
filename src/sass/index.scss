@@ -11,7 +11,8 @@ Settings
 /*
 Libs
  */
-@import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.min.css";
+@import "libs/grid.min.css";
+@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
 
 /*
 Components
@@ -19,18 +20,48 @@ Components
 @import "components/app";
 @import "components/header";
 @import "components/footer";
-@import "components/button";
-@import "components/nav";
-@import "components/page";
-@import "components/social";
-@import "components/section";
-@import "components/scroll-settings";
-@import "components/grid";
-@import "components/video";
-@import "components/burger";
 @import "components/link";
+@import "components/button";
+@import "components/scroll-settings";
+@import "components/nav";
+@import "components/waves";
+@import "components/tabs";
+@import "components/product";
+@import "components/rating";
+@import "components/input";
+@import "components/modal";
 
 /*
 Pages
  */
 @import "pages/home/index";
+@import "pages/404/index";
+
+//.is-loading{
+//	.hero{
+//		transition: none;
+//			.waves{
+//				opacity: 0;
+//					&-mask{
+//						&-item{
+//							transition: none;
+//						}
+//					}
+//					&-row{
+//						transition: none;
+//					}
+//			}
+//			&-title{
+//				opacity: 0;
+//				transform: translateY(10px);
+//			}
+//			&-description{
+//				opacity: 0;
+//				transform: translateY(10px);
+//			}
+//			&-action{
+//				opacity: 0;
+//				transform: translateY(10px);
+//			}
+//	}
+//}

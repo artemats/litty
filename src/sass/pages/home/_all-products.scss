@@ -1,0 +1,76 @@
+.all-products{
+	background-color: var(--color-violet);
+	color: var(--color-white);
+	padding: 100px 0 88px;
+	text-align: center;
+		&-tabs{
+			margin-top: 40px;
+				@include d($md){
+					display: block;
+					overflow-y: hidden;
+					overflow-x: auto;
+					white-space: nowrap;
+					margin: 40px -40px 0;
+					padding-bottom: 20px;
+					padding-left: 40px;
+						.tabs-btn{
+							display: inline-block;
+								&:last-child{
+									margin-right: 40px;
+								}
+						}
+				}
+		}
+		&-list{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -47px;
+			align-items: flex-end;
+			padding-top: 50px;
+				&-item{
+					padding: 0 47px;
+					width: 33.33%;
+						@include m(992){
+							&:nth-child(3n + 2){
+								.product{
+									transform: translateY(-32px);
+								}
+							}
+						}
+						@include d($xxl){
+							padding: 0 20px;
+						}
+						@include d($md){
+							width: 50%;
+						}
+						@include d($xs){
+							width: 100%;
+						}
+				}
+				@include d($xxl){
+					margin: 0 -20px;
+				}
+				@include d($xxs){
+					padding-top: 0;
+				}
+		}
+		.section{
+			&-wave{
+				color: var(--color-violet);
+			}
+			&-bg{
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 0;
+				width: 157.5vw;
+				height: auto;
+					@include d($xl){
+						width: 2000px;
+					}
+			}
+		}
+		@include d($md){
+			padding: 100px 0;
+		}
+}

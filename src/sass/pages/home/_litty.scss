@@ -1,0 +1,115 @@
+.litty{
+	padding: 164px 0 410px;
+		&-icon{
+			width: 88px;
+			margin-bottom: 26px;
+				@include d($xs){
+					height: 85px;
+						img{
+							height: 100%;
+							object-fit: contain;
+							object-position: left;
+						}
+				}
+		}
+		.section{
+				&-content{
+					padding-left: 80px;
+						&-description{
+							padding: 15px 150px 0 0;
+							margin-bottom: 74px;
+								@include d($lg){
+									padding: 15px 130px 0 0;
+								}
+								@include d($xl){
+									padding: 15px 80px 0 0;
+								}
+								@include d($xxl){
+									padding: 15px 50px 0 0;
+								}
+								@include d($md){
+									margin-bottom: 30px;
+								}
+						}
+						&-action{
+							margin-top: 105px;
+								@include d($md){
+									margin: 30px 0 50px;
+								}
+						}
+						@include d($xxl){
+							padding-left: 0;
+						}
+				}
+				&-bg{
+					bottom: -40.5%;
+					right: -5%;
+				}
+				&-banner{
+					width: 792px;
+					height: 487px;
+					left: 44.7%;
+					transform: translateX(-50%);
+					bottom: -80px;
+					position: absolute;
+					z-index: 1;
+						&-abstract{
+							&.__1{
+								bottom: -18px;
+								left: 21%;
+								width: 262px;
+								height: 326px;
+									@include d($xl){
+										width: 242px;
+										height: 306px;
+									}
+									@include d($xxl){
+										width: 212px;
+										height: 276px;
+									}
+									@include d($sm){
+										width: 36.8%;
+										height: auto;
+									}
+							}
+							&.__2{
+								bottom: -12px;
+								left: 13.6%;
+								width: 409px;
+								height: 326px;
+									@include d($xl){
+										width: 389px;
+										height: 306px;
+									}
+									@include d($xxl){
+										width: 359px;
+										height: 276px;
+									}
+									@include d($sm){
+										width: 62.4%;
+										height: auto;
+									}
+							}
+						}
+						@include d($xl){
+							width: 742px;
+							height: 437px;
+							left: 50%;
+						}
+						@include d($xxl){
+							width: 692px;
+							height: 387px;
+						}
+						@include d($sm){
+							width: 108%;
+							height: auto;
+						}
+				}
+		}
+		@include d($md){
+			padding: 100px 0 400px;
+		}
+		@include d($xxs){
+			padding: 80px 0 50vw;
+		}
+}

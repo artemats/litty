@@ -1,0 +1,97 @@
+.distributors{
+	padding: 187px 0 264px;
+		.section{
+				&-content{
+					padding-left: 76px;
+						&-description{
+							margin: 58px 0 32px;
+							max-width: 550px;
+								.h-5{
+									max-width: 96%;
+								}
+						}
+						@include d($xxl){
+							padding-left: 0;
+						}
+						@include d($xxs){
+							.h-2{
+								max-width: 80%;
+							}
+						}
+				}
+				&-banner{
+					position: absolute;
+					//top: 6.5%;
+					top: 12%;
+					right: -8.2%;
+					width: 622px;
+					height: 527px;
+						&-abstract{
+							&.__1{
+								width: 310px;
+								height: 109px;
+								top: 47.6%;
+								left: 23.6%;
+									@include d($lg){
+										width: 230px;
+									}
+									@include d($xxl){
+										width: 180px;
+									}
+							}
+							&.__2{
+								left: 14%;
+								top: 37%;
+								width: 374px;
+								height: 273px;
+									@include d($lg){
+										width: 294px;
+									}
+									@include d($xxl){
+										width: 244px;
+									}
+							}
+						}
+						@include d($lg){
+							width: 542px;
+							height: 447px;
+							right: -3.2%;
+						}
+						@include d($xxl){
+							width: 492px;
+							height: 397px;
+						}
+						@include d($md){
+							top: auto;
+							bottom: -75%;
+							right: -2%;
+						}
+						@include d($sm){
+							bottom: -100%;
+							right: 50%;
+							transform: translateX(50%);
+						}
+						@include d($xs){
+							max-width: 480px;
+							width: 100%;
+							height: auto;
+						}
+						@include d($xxs){
+							bottom: -87vw;
+						}
+				}
+				&-bg{
+					left: 37%;
+					bottom: -32.5%;
+				}
+		}
+		@include d($md){
+			padding: 100px 0 430px;
+		}
+		@include d($xs){
+			padding: 100px 0 470px;
+		}
+		@include d($xxs){
+			padding: 100px 0 100vw;
+		}
+}

@@ -1,0 +1,128 @@
+.hot-products{
+	background-color: var(--color-red);
+	padding: 180px 0 85px;
+	color: var(--color-white);
+		&-carousel{
+			margin: -23px -47px 0;
+				&-slide{
+					padding: 0 47px;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+						.product{
+							@include d($xxs){
+								margin-top: 0;
+							}
+						}
+						@include d($xxl){
+							padding: 0 20px;
+						}
+						@include d($xxs){
+							max-width: 88vw;
+							padding: 0 10px;
+						}
+				}
+				@include d($xxl){
+					margin: -23px -20px 0;
+				}
+				@include d($sm){
+					margin: 40px -20px 0;
+				}
+				@include d($xs){
+					margin: 40px -55px 0;
+				}
+		}
+		.section{
+				&-wave{
+					color: var(--color-red);
+				}
+		}
+		.splide{
+			&__list{
+				height: auto;
+			}
+			&__arrows{
+				position: absolute;
+				top: -36px;
+				right: 20px;
+				z-index: 1;
+					&:before{
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%,-50%);
+						width: 9px;
+						height: 9px;
+						border-radius: 50%;
+						background-color: var(--color-white);
+						transition: background-color var(--opacity-duration) var(--opacity-ease);
+					}
+					@include hover(991){
+						&:hover{
+							&:before{
+								background-color: var(--color-black);
+							}
+						}
+					}
+					@include d($sm){
+						top: 0;
+						right: auto;
+						left: 0;
+					}
+					@include d($xs){
+						left: 40px;
+					}
+			}
+			&__arrow{
+				border: none;
+				background-color: transparent;
+				padding: 0;
+				width: 40px;
+				height: 40px;
+				position: relative;
+					svg{
+						display: none;
+					}
+					&:before{
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%,-50%);
+						width: 0;
+						height: 0;
+						border-style: solid;
+						transition: border-color var(--opacity-duration) var(--opacity-ease);
+					}
+					&--prev{
+						margin-right: 15px;
+						&:before{
+							border-width: 11.5px 17px 11.5px 0;
+							border-color: transparent var(--color-white) transparent transparent;
+						}
+						@include hover(991){
+							&:hover{
+								&:before{
+									border-color: transparent var(--color-black) transparent transparent;
+								}
+							}
+						}
+					}
+					&--next{
+						margin-left: 15px;
+						&:before{
+							border-width: 11.5px 0 11.5px 17px;
+							border-color: transparent transparent transparent var(--color-white);
+						}
+						@include hover(991){
+							&:hover{
+								&:before{
+									border-color: transparent transparent transparent var(--color-black);
+								}
+							}
+						}
+					}
+			}
+		}
+}

@@ -1,0 +1,40 @@
+.rating{
+	display: flex;
+	align-items: center;
+		&-item{
+			display: inline-block;
+			width: 23px;
+			height: 23px;
+				&:not(:last-child){
+					margin-right: 12px;
+				}
+		}
+		&[data-rating="1"]{
+			.rating-item{
+				&:nth-child(n + 2){
+					opacity: .2;
+				}
+			}
+		}
+		&[data-rating="2"]{
+			.rating-item{
+				&:nth-child(n + 3){
+					opacity: .2;
+				}
+			}
+		}
+		&[data-rating="3"]{
+			.rating-item{
+				&:nth-child(n + 4){
+					opacity: .2;
+				}
+			}
+		}
+		&[data-rating="4"]{
+			.rating-item{
+				&:nth-child(n + 5){
+					opacity: .2;
+				}
+			}
+		}
+}

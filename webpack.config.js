@@ -100,7 +100,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "/dist"),
         compress: true,
-        port: 9000,
+        port: 8000,
         historyApiFallback: true,
     },
     plugins: [
@@ -117,29 +117,8 @@ module.exports = {
             },
         }),
         new HtmlWebpackPlugin({
-            filename: 'about.html',
-            template: path.resolve(__dirname, 'src/html', 'about.html.ejs'),
-            minify: {
-                collapseWhitespace: false
-            },
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'krgt-1.html',
-            template: path.resolve(__dirname, 'src/html', 'krgt-1.html.ejs'),
-            minify: {
-                collapseWhitespace: false
-            },
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'arch-1s.html',
-            template: path.resolve(__dirname, 'src/html', 'arch-1s.html.ejs'),
-            minify: {
-                collapseWhitespace: false
-            },
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'method-143.html',
-            template: path.resolve(__dirname, 'src/html', 'method-143.html.ejs'),
+            filename: 'page-not-found.html',
+            template: path.resolve(__dirname, 'src/html', 'page-not-found.html.ejs'),
             minify: {
                 collapseWhitespace: false
             },

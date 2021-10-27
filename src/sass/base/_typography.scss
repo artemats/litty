@@ -1,57 +1,102 @@
 h1{
-	font-size: 62px;
-	line-height: 1.2em;
-	font-family: var(--font-title-extra);
+	font-family: var(--font-title);
 	text-transform: uppercase;
-		@include mh($minHeight){
-			font-size: 7.3vmin;
+	font-size: 85px;
+	line-height: 1em;
+	letter-spacing: -.022em;
+		@include d($xl){
+			font-size: 78px;
+		}
+		@include d($xxl){
+			font-size: 60px;
+		}
+		@include d($md){
+			font-size: 68px;
+		}
+		@include d($xs){
+			font-size: 58px;
+		}
+		@include d($xxs){
+			font-size: 46px;
 		}
 }
 
 h2{
-	font-size: 150px;
+	font-family: var(--font-title);
+	font-size: 140px;
 	line-height: 1em;
-	font-family: var(--font-title-extra);
+	letter-spacing: .02em;
 	text-transform: uppercase;
-		@include mh($minHeight){
-			font-size: 17.45vmin;
+		@include d($lg){
+			font-size: 120px;
+		}
+		@include d($xl){
+			font-size: 112px;
+		}
+		@include d($xxl){
+			font-size: 92px;
+		}
+		@include d($sm){
+			font-size: 78px;
+		}
+		@include d($xs){
+			font-size: 64px;
+		}
+		@include d($xxs){
+			font-size: 50px;
 		}
 }
 
 h3{
-	font-size: 122px;
-	line-height: 1em;
-	font-family: var(--font-title-extra);
+	font-family: var(--font-title);
+	font-size: 70px;
+	line-height: 1.07em;
 	text-transform: uppercase;
-		@include mh($minHeight){
-			font-size: 14.2vmin;
+	letter-spacing: -.02em;
+		@include d($md){
+			font-size: 64px;
+		}
+		@include d($xs){
+			font-size: 58px;
+		}
+		@include d($xxs){
+			font-size: 48px;
 		}
 }
 
 h4{
-	font-size: 120px;
-	line-height: 1em;
-	font-family: var(--font-title-extra);
-	text-transform: uppercase;
-		@include mh($minHeight){
-			font-size: 14vmin;
-		}
+	font-family: var(--font-title);
+	font-size: 24px;
+	line-height: 1.16em;
 }
 
 h5{
-	font-size: 30px;
-	line-height: 1em;
-	font-family: var(--font-title-extra);
-	text-transform: uppercase;
-	color: var(--color-grey);
-	font-weight: 900;
-		@include mh($minHeight){
-			font-size: 3.55vmin;
+	font-family: var(--font-body);
+	font-size: 24px;
+	line-height: 1.3em;
+		@include d($xxl){
+			font-size: 18px;
 		}
 }
 
-p, li{
-	font-family: inherit;
+h6{
+
+}
+
+h1, h2, h3, h4, h5, h6{
+	span:not(.word){
+		display: inline-block;
+		color: var(--color-white);
+		border-radius: 15px;
+		background-color: var(--color-black);
+		padding: 0 10px;
+		margin: 0 -8px;
+	}
+}
+
+p, li, span{
 	font-size: inherit;
-	line-height: 1.63em;
+	line-height: inherit;
+	font-family: inherit;
+	letter-spacing: -.005em;
 }

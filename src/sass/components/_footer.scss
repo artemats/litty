@@ -1,47 +1,105 @@
 .footer{
-		&-nav{
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-			margin-bottom: -6px;
-				nav{
-
-				}
-				ul{
-					display: flex;
-					align-items: flex-end;
-				}
-				li{
-					&:not(:last-child){
-						padding-right: 17vmin;
-					}
-				}
-		}
-		&-social{
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 2;
-				&-link{
-					text-transform: lowercase;
+	background-color: var(--color-black);
+	padding: 157px 0 103px;
+	position: relative;
+	color: var(--color-white);
+		&-logo{
+			width: 130px;
+			position: relative;
+				img{
 					width: 100%;
 				}
+		}
+		&-copyright{
+			max-width: 152px;
+			margin: 46px 0 27px;
+				@include d($md){
+					margin: 50px 0 0;
+				}
+		}
+		&-nav{
+			display: flex;
+			flex-wrap: wrap;
+				&-item{
+					flex: 1;
+						@include d($xs){
+							margin-top: 50px;
+						}
+				}
+				&-title{
+					opacity: .6;
+					margin-bottom: 23px;
+				}
 				li{
-					&:not(:last-child){
-						padding-bottom: 5.1vmin;
+					padding: 9px 0;
+						@include d($xs){
+							width: 50%;
+						}
+				}
+				a{
+					display: inline-flex;
+					align-items: center;
+					white-space: nowrap;
+					text-transform: capitalize;
+					transition: color var(--opacity-duration) var(--opacity-ease);
+						img{
+							width: 26px;
+							height: 26px;
+							margin-right: 11px;
+							object-fit: contain;
+							object-position: center;
+								@include d($xxl){
+									margin-top: 2px;
+								}
+						}
+						@include hover($hoverWidth){
+							&:hover{
+								color: var(--color-red);
+							}
+						}
+						@include d($xxl){
+							white-space: normal;
+							align-items: flex-start;
+						}
+				}
+				ul{
+					@include d($xs){
+						display: flex;
+						flex-wrap: wrap;
+					}
+				}
+				@include d($md){
+					padding-top: 40px;
+				}
+				@include d($xs){
+					flex-direction: column;
+				}
+				&.display-md{
+					ul{
+						display: flex;
+						align-items: center;
+						flex-wrap: wrap;
+					}
+					li{
+						&:not(:last-child){
+							margin-right: 8vw;
+								@include d($xs){
+									margin-right: 0;
+								}
+						}
 					}
 				}
 		}
-		&-banner{
-			position: absolute;
-			height: 53.7vmin;
-			width: 47vmin;
-			bottom: -50px;
-			left: 44.5%;
-			pointer-events: none;
-			z-index: -1;
-				img{
-					@include imageCover(center);
+		.section{
+				&-wave{
+					color: var(--color-black);
+					left: -500px;
 				}
+		}
+		@include d($md){
+			padding: 100px 0 50px;
+		}
+		@include d($xxs){
+			padding: 80px 0 50px;
 		}
 }
