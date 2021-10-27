@@ -237,3 +237,17 @@ body{
 .word{
 	display: inline-block;
 }
+
+.is-safari{
+	.btn{
+		transition: background-color var(--transform-duration) var(--transform-ease);
+			&:before{
+				display: none;
+			}
+			@include hover($hoverWidth) {
+				&:hover {
+					background-color: var(--color-black);
+				}
+			}
+	}
+}

@@ -7,7 +7,7 @@
 	background-color: transparent;
 	height: 60px;
 	line-height: 58px;
-	border-radius: 100px;
+	border-radius: 100px !important;
 	color: var(--color-black);
 	position: relative;
 	font-size: 14px;
@@ -49,17 +49,19 @@
 			//opacity: 0;
 			background-color: var(--color-black);
 		}
-		&:hover{
-			transition: border-color var(--transform-duration) var(--transform-ease), color var(--transform-duration) var(--transform-ease);
-			border-color: var(--color-black);
-			color: var(--color-white);
-				&:before{
-					transition: transform 0.7s var(--transform-ease), opacity var(--transform-duration) var(--transform-ease);
-					opacity: 1;
-					transform: translate(-50%,-50%) scale(4);
-				}
-				.btn-icon{
+		@include hover($hoverWidth) {
+			&:hover {
+				transition: border-color var(--transform-duration) var(--transform-ease), color var(--transform-duration) var(--transform-ease);
+				border-color: var(--color-black);
+				color: var(--color-white);
+					&:before {
+						transition: transform 0.7s var(--transform-ease), opacity var(--transform-duration) var(--transform-ease);
+						opacity: 1;
+						transform: translate(-50%, -50%) scale(4);
+					}
+				.btn-icon {
 					transform: translateY(-50%) rotate(45deg);
 				}
+			}
 		}
 }

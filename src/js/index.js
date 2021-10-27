@@ -28,3 +28,6 @@ showTextOnScroll();
 document.addEventListener('DOMContentLoaded', function(event) {
 	document.querySelector('#wrapper').classList.remove('is-loading');
 });
+
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+isSafari ? document.body.classList.add('is-safari') : null;
