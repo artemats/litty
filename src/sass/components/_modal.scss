@@ -7,13 +7,15 @@
 	background-color: rgba(0,0,0,.8);
 	display: none;
 	opacity: 0;
+	z-index: 9;
 		&-close{
 			position: absolute;
 			inset: 0;
 			cursor: pointer;
 		}
 		&-box{
-			width: 416px;
+			max-width: 416px;
+			width: 96%;
 			min-height: 130px;
 			background-repeat: no-repeat;
 			background-size: contain;

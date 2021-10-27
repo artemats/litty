@@ -4,7 +4,7 @@ export const footerParallax = () => {
 
 	const footer = document.querySelector('.footer');
 
-	if(!!footer) {
+	if(!!footer && window.innerWidth > 1024) {
 
 		const footerContainer = footer.querySelector('.container');
 
