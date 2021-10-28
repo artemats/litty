@@ -51,9 +51,10 @@
 		}
 		@include hover($hoverWidth) {
 			&:hover {
-				transition: border-color var(--transform-duration) var(--transform-ease), color var(--transform-duration) var(--transform-ease);
+				transition: border-color var(--transform-duration) var(--transform-ease), color var(--transform-duration) var(--transform-ease), background-color .7s var(--opacity-ease);
 				border-color: var(--color-black);
 				color: var(--color-white);
+				background-color: var(--color-black);
 					&:before {
 						transition: transform 0.7s var(--transform-ease), opacity var(--transform-duration) var(--transform-ease);
 						opacity: 1;
