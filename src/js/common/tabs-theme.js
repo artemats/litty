@@ -1,3 +1,4 @@
+import { TweenLite } from 'gsap';
 import {locoScroll} from "../scroll/locoScroll";
 
 export const initTabs = () => {
@@ -17,11 +18,25 @@ export const initTabs = () => {
 				let tabId = tabButtons[i].getAttribute('data-tab-btn-id');
 				let tabContent = document.querySelector(`.tabs-content[data-tab-content-id="${tabId}"]`);
 				if (!!tabContent) {
-					hideAllTabContents(tabContents, tabButtons);
-					tabContent.style.display = 'block';
+					// hideAllTabContents(tabContents, tabButtons);
+
+					for(let i = 0; i < tabContents.length; i++) {
+						TweenLite.to(tabContents[i], {
+							opacity: 0,
+							duration: 0.2,
+							onComplete: () => {
+								tabContents[i].style.display = 'none';
+								showActiveTab(tabContent);
+							},
+						});
+						// tabContents[i].style.display = 'none';
+					}
+					for(let i = 0; i < tabButtons.length; i++) {
+						tabButtons[i].classList.remove('is-active');
+					}
+
+					// tabContent.style.display = 'block';
 					tabButtons[i].classList.add('is-active');
-					// refresh scroll //
-					locoScroll.update();
 				}
 			});
 
@@ -35,11 +50,35 @@ export const initTabs = () => {
 
 }
 
-const hideAllTabContents = (tabContents, tabButtons) => {
-	for(let i = 0; i < tabContents.length; i++) {
-		tabContents[i].style.display = 'none';
-	}
-	for(let i = 0; i < tabButtons.length; i++) {
-		tabButtons[i].classList.remove('is-active');
-	}
+const showActiveTab = (tabContent) => {
+	TweenLite.set(tabContent, {
+		opacity: 0,
+		display: 'block',
+		onComplete: () => {
+
+			TweenLite.to(tabContent, {
+				opacity: 1,
+				duration: 0.5,
+			});
+
+			// refresh scroll //
+			locoScroll.update();
+		},
+	});
 }
+
+// const hideAllTabContents = (tabContents, tabButtons) => {
+// 	for(let i = 0; i < tabContents.length; i++) {
+// 		TweenLite.to(tabContents[i], {
+// 			opacity: 0,
+// 			duration: 0.2,
+// 			onComplete: () => {
+// 				tabContents[i].style.display = 'none';
+// 			},
+// 		});
+// 		// tabContents[i].style.display = 'none';
+// 	}
+// 	for(let i = 0; i < tabButtons.length; i++) {
+// 		tabButtons[i].classList.remove('is-active');
+// 	}
+// }

@@ -65,6 +65,7 @@
 				z-index: 0;
 				width: 157.5vw;
 				height: auto;
+				transition: all var(--transform-duration) var(--transform-ease);
 					@include d($xl){
 						width: 2000px;
 					}
