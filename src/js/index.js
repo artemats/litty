@@ -13,6 +13,7 @@ import {splittingText} from "./common/splittingText";
 import {showTextOnScroll} from "./common/parallax/showTextOnScroll";
 import './common/mouseMove';
 import './common/subscribe';
+import './common/insta';
 
 splittingText();
 initHeroCarousel();
