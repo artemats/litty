@@ -6,6 +6,4 @@ const feed = new Instafeed({
 	template: '<div class="instafeed-box"><a href="{{link}}" target="_blank" class="instafeed-box-link"><img title="{{caption}}" src="{{image}}" alt="{{id}}"/></a></div>',
 });
 
-feed.run();
-
-console.log(feed);
+// feed.run();
