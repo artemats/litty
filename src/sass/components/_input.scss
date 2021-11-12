@@ -7,9 +7,19 @@
 	font-family: var(--font-body);
 	font-size: 20px;
 	padding: 0;
+	transition: border-color var(--opacity-duration) var(--opacity-ease);
 		&-container{
 			display: block;
 			position: relative;
+			padding-bottom: 20px;
+				&.has-error{
+					.input{
+						border-color: var(--color-red);
+							&-label{
+								color: var(--color-red);
+							}
+					}
+				}
 		}
 		&-label{
 			font-size: 20px;
@@ -17,15 +27,13 @@
 			position: absolute;
 			left: 0;
 			top: 15px;
-			transition: font-size var(--transform-duration) var(--transform-ease), top var(--transform-duration) var(--transform-ease);
+			opacity: .5;
+			transition: font-size var(--transform-duration) var(--transform-ease), top var(--transform-duration) var(--transform-ease), color var(--opacity-duration) var(--opacity-ease);
+			pointer-events: none;
 		}
 		&:focus,
 		&:valid{
 			outline: none;
-				//& ~ .input-label{
-				//	font-size: 12px;
-				//	top: -12px;
-				//}
 		}
 		&.is-focus{
 			& ~ .input-label{
@@ -33,4 +41,9 @@
 				top: -12px;
 			}
 		}
+}
+
+.textarea{
+	padding-top: 18px;
+	height: 92px;
 }

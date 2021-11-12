@@ -14,7 +14,7 @@
 				&-banner{
 					right: 0;
 					//top: -14%;
-					top: -7%;
+					top: 6%;
 					width: 494px;
 					height: 584px;
 					position: absolute;
@@ -55,14 +55,14 @@
 						}
 						@include d($md){
 							top: auto;
-							bottom: -100%;
+							bottom: -380px;
 						}
 						@include d($sm){
-							bottom: -115%;
+							bottom: -450px;
 						}
 						@include d($xxs){
 							width: 90%;
-							bottom: -120%;
+							bottom: -460px;
 						}
 				}
 		}

@@ -2,7 +2,6 @@ import '../sass/index.scss';
 import {initHeroCarousel} from "./common/home/heroCarousel";
 import {initTabs} from "./common/tabs-theme";
 import {initHotCarousel} from "./common/home/hotCarousel";
-import {initTestimonialsCarousel} from "./common/home/testimonialsCarousel";
 import {inputFocus} from "./common/inputFocus";
 import {initScrollNavOnClick} from "./common/scrollToTheme";
 import './scroll/locoScroll';
@@ -14,12 +13,12 @@ import {showTextOnScroll} from "./common/parallax/showTextOnScroll";
 import './common/mouseMove';
 import './common/subscribe';
 import './common/insta';
+import {locoScroll} from "./scroll/locoScroll";
 
 splittingText();
 initHeroCarousel();
 initTabs();
 initHotCarousel();
-initTestimonialsCarousel();
 inputFocus();
 initScrollNavOnClick();
 footerParallax();
@@ -28,6 +27,7 @@ showTextOnScroll();
 
 document.addEventListener('DOMContentLoaded', function(event) {
 	document.querySelector('#wrapper').classList.remove('is-loading');
+	locoScroll.update();
 });
 
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);

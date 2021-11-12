@@ -1,18 +1,38 @@
 .instafeed{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -15px;
 		&-box{
-			width: 33.33%;
-			padding: 15px;
+			padding: 20px;
+			display: inline-block;
 				&-link{
 					display: block;
+					border-radius: 20px;
+					overflow: hidden;
+					width: 400px;
+					height: 400px;
 						img{
 							width: 100%;
 							height: 100%;
 							object-fit: cover;
 							object-position: center;
 						}
+						@include d($xl){
+							width: 360px;
+							height: 360px;
+						}
+						@include d($xs){
+							width: 70vw;
+							height: 70vw;
+						}
+				}
+				@include d($xs){
+					padding: 10px;
+				}
+		}
+		&-wrap{
+			z-index: 1;
+			position: relative;
+			margin: 90px -20px 40px;
+				@include d($xs){
+					margin: 40px -10 20px;
 				}
 		}
 }
